@@ -7,6 +7,8 @@ import (
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
+
+	"github.com/ChristianAEDev/worky-server/data"
 )
 
 func main() {
@@ -52,5 +54,14 @@ func initEndpointsV1(router *mux.Router) {
 
 // GetTasks loads all tasks from the database and sends them to the caller
 func GetTasks(w http.ResponseWriter, r *http.Request) {
-	http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
+	var tasks = data.GetTasksDummy()
+
+	tasksJSON, err := data.ToJSON(tasks)
+	if err != nil {
+		log.Warningf("Error creating JSON representation of a slice of tasks")
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+	}
+
+	log.Infof("Sending %v tasks", len(tasks))
+	w.Write(tasksJSON)
 }
