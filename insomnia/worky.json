@@ -1,0 +1,58 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2017-10-24T18:21:05.160Z",
+	"__export_source": "insomnia.desktop.app:v5.9.6",
+	"resources": [
+		{
+			"_id": "wrk_1a971159b0814d52a2bc11dc245c762b",
+			"parentId": null,
+			"modified": 1508777403833,
+			"created": 1508777403833,
+			"name": "worky",
+			"description": "",
+			"certificates": [],
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_59d0fee8fb634b49abb89d660f7468ed",
+			"parentId": "wrk_1a971159b0814d52a2bc11dc245c762b",
+			"modified": 1508777403847,
+			"created": 1508777403847,
+			"name": "Base Environment",
+			"data": {},
+			"color": null,
+			"isPrivate": false,
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_5ce35fae538446afb892c16ddcd564f6",
+			"parentId": "wrk_1a971159b0814d52a2bc11dc245c762b",
+			"modified": 1508777403843,
+			"created": 1508777403843,
+			"name": "Default Jar",
+			"cookies": [],
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_2bac5a7e046a47ea9c72ad8c2c7cc3cf",
+			"parentId": "wrk_1a971159b0814d52a2bc11dc245c762b",
+			"modified": 1508868561486,
+			"created": 1508777415539,
+			"url": "http://localhost:9090/api/v1/tasks",
+			"name": "tasks",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1508777415539,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		}
+	]
+}
