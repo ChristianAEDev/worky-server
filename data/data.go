@@ -131,5 +131,169 @@ func GetTasksDummy() []Task {
 		},
 	}
 
-	return []Task{task1}
+	task2 := Task{
+		ID:    2,
+		Title: "The second task ever created!",
+		Content: `
+		# Headline
+		
+		Content of a task:
+		* Follows the [CommonMark](http://commonmark.org/) spec
+		* Render a string as markdown
+		`,
+		TimeCreated: time.Now(),
+		SubTasks: []Task{
+			{
+				ID:    2,
+				Title: "This is the first subtask of task 1!",
+				Content: `
+			  # Headline
+			
+			  Content of a task:
+			  * Follows the [CommonMark](http://commonmark.org/) spec
+			  * Render a string as markdown
+			`,
+				TimeCreated: time.Now(),
+				SubTasks: []Task{
+					{
+						ID:    3,
+						Title: "Hit is the first subtask of subtask 2!",
+						Content: `
+						# Headline
+						
+						Content of a task:
+						* Follows the [CommonMark](http://commonmark.org/) spec
+						* Render a string as markdown
+						`,
+						TimeCreated: time.Now(),
+					},
+				},
+			},
+		},
+		Updates: []TaskUpdate{
+			{
+				ID:          1,
+				TimeCreated: time.Now(),
+				Type:        PhoneCall,
+				Title:       "Update 1: Call from Mr. X",
+				Description: `
+				# Headline
+				
+				Content of a task:
+				* Follows the [CommonMark](http://commonmark.org/) spec
+				* Render a string as markdown
+				`,
+			},
+			{
+				ID:          2,
+				TimeCreated: time.Now(),
+				Type:        File,
+				Title:       "Update 2: Last years sales",
+				Description: `
+				# Headline
+				
+				Content of a task:
+				* Follows the [CommonMark](http://commonmark.org/) spec
+				* Render a string as markdown
+				`,
+			},
+			{
+				ID:          3,
+				TimeCreated: time.Now(),
+				Type:        Mail,
+				Title:       "Update 3: Mail from Mr. X",
+				Description: `
+				# Headline
+				
+				Content of a task:
+				* Follows the [CommonMark](http://commonmark.org/) spec
+				* Render a string as markdown
+				`,
+			},
+		},
+	}
+
+	task3 := Task{
+		ID:    3,
+		Title: "The third task ever created!",
+		Content: `
+		# Headline
+		
+		Content of a task:
+		* Follows the [CommonMark](http://commonmark.org/) spec
+		* Render a string as markdown
+		`,
+		TimeCreated: time.Now(),
+		SubTasks: []Task{
+			{
+				ID:    2,
+				Title: "This is the first subtask of task 1!",
+				Content: `
+			  # Headline
+			
+			  Content of a task:
+			  * Follows the [CommonMark](http://commonmark.org/) spec
+			  * Render a string as markdown
+			`,
+				TimeCreated: time.Now(),
+				SubTasks: []Task{
+					{
+						ID:    3,
+						Title: "Hit is the first subtask of subtask 2!",
+						Content: `
+						# Headline
+						
+						Content of a task:
+						* Follows the [CommonMark](http://commonmark.org/) spec
+						* Render a string as markdown
+						`,
+						TimeCreated: time.Now(),
+					},
+				},
+			},
+		},
+		Updates: []TaskUpdate{
+			{
+				ID:          1,
+				TimeCreated: time.Now(),
+				Type:        PhoneCall,
+				Title:       "Update 1: Call from Mr. X",
+				Description: `
+				# Headline
+				
+				Content of a task:
+				* Follows the [CommonMark](http://commonmark.org/) spec
+				* Render a string as markdown
+				`,
+			},
+			{
+				ID:          2,
+				TimeCreated: time.Now(),
+				Type:        File,
+				Title:       "Update 2: Last years sales",
+				Description: `
+				# Headline
+				
+				Content of a task:
+				* Follows the [CommonMark](http://commonmark.org/) spec
+				* Render a string as markdown
+				`,
+			},
+			{
+				ID:          3,
+				TimeCreated: time.Now(),
+				Type:        Mail,
+				Title:       "Update 3: Mail from Mr. X",
+				Description: `
+				# Headline
+				
+				Content of a task:
+				* Follows the [CommonMark](http://commonmark.org/) spec
+				* Render a string as markdown
+				`,
+			},
+		},
+	}
+
+	return []Task{task1, task2, task3}
 }
